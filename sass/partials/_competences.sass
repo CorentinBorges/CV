@@ -1,0 +1,69 @@
+
+$time-bar: 1s
+$bar-numb: 5
+$time-bar: 1s
+$electric-blue: #b3f3fe
+
+
+/****************bars**********************/
+.bars
+	z-index: 4
+	background-color: $blue-title
+	margin: 15px 0 3vh
+	transform-origin: left
+	height: 3px
+	transform: scaleX(0)
+
+.full-bar
+	transform: scaleX(1)
+.bar-charge
+	transform: scaleX(1)
+	transition: transform $time-bar
+
+/**************** Button exp ***********/
+.btn-comp
+	border: 1px $blue-title solid
+	border-radius: 5px
+	font-weight: 600
+	font-size: 20px
+	color: $blue-title
+	background-color: $background-left-color
+	animation: blueLight 1500ms infinite linear alternate both
+
+@keyframes blueLight
+	0%
+		filter: drop-shadow(0 0 0px $electric-blue)
+	100%
+		filter: drop-shadow(0 0 5px $electric-blue)
+
+/*********** text **************/
+//.greyBloc
+//	z-index: 3
+//	height: 40%
+//	width: -35vw
+//	position: relative
+//	top: -38%
+//	background-color: blue
+//	transform: scaleY(1)
+//	margin-bottom: -10%
+//
+//
+//.greyBlocDown
+//	transform-origin: bottom
+//	transform: scaleY(0)
+//	transition: $time-bar + 2600ms
+.greyBloc
+	z-index: 3
+	height: 13%
+	width: -25vw
+	position: relative
+	top: -10%
+	background-color: $background-left-color
+	transform: scaleY(1)
+	margin-bottom: -35%
+
+
+.greyBlocDown
+	transform-origin: bottom
+	transform: scaleY(0)
+	transition: $time-bar + 500ms
